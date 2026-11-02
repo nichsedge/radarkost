@@ -23,11 +23,17 @@
     "baseBareRent": 1200000,
     "description": "Prime corporate worker haven with street food and walking access to Sudirman"
   },
+  "setiabudi": {
+    "name": "Setiabudi",
+    "city": "Jakarta Selatan",
+    "baseBareRent": 1300000,
+    "description": "Walk-to-work zone behind Sudirman and Rasuna Said skyscrapers"
+  },
   "karet": {
     "name": "Karet / Setiabudi",
     "city": "Jakarta Pusat",
     "baseBareRent": 1250000,
-    "description": "Walk-to-work zone behind Sudirman and Rasuna Said skyscapers"
+    "description": "Walk-to-work zone behind Sudirman and Rasuna Said skyscrapers"
   },
   "kebon-jeruk": {
     "name": "Kebon Jeruk",
@@ -35,16 +41,58 @@
     "baseBareRent": 800000,
     "description": "Residential area with quick toll and inner-ring busway connections"
   },
+  "kebayoran-baru": {
+    "name": "Kebayoran Baru",
+    "city": "Jakarta Selatan",
+    "baseBareRent": 1400000,
+    "description": "Upscale lifestyle and corporate district (Senopati, Blok M, SCBD)"
+  },
   "kebayoran-lama": {
     "name": "Kebayoran Lama",
     "city": "Jakarta Selatan",
     "baseBareRent": 1050000,
     "description": "Strategic link between South Jakarta lifestyle hubs and Tangerang rail"
   },
+  "tebet": {
+    "name": "Tebet",
+    "city": "Jakarta Selatan",
+    "baseBareRent": 1050000,
+    "description": "Popular worker and young professional culinary enclave"
+  },
+  "mampang-prapatan": {
+    "name": "Mampang Prapatan",
+    "city": "Jakarta Selatan",
+    "baseBareRent": 1100000,
+    "description": "Central artery connecting Kuningan to South Jakarta"
+  },
+  "cilandak": {
+    "name": "Cilandak / Fatmawati",
+    "city": "Jakarta Selatan",
+    "baseBareRent": 1150000,
+    "description": "TB Simatupang corporate office belt with MRT access"
+  },
   "grogol": {
     "name": "Grogol / Tanjung Duren",
     "city": "Jakarta Barat",
     "baseBareRent": 950000,
     "description": "University and mall hub (Untar, Trisakti, Central Park, Mall Taman Anggrek)"
+  },
+  "cempaka-putih": {
+    "name": "Cempaka Putih",
+    "city": "Jakarta Pusat",
+    "baseBareRent": 950000,
+    "description": "Residential and hospital hub with fast access to bypass"
+  },
+  "matraman": {
+    "name": "Matraman",
+    "city": "Jakarta Timur",
+    "baseBareRent": 900000,
+    "description": "East-Central transit gateway near Salemba & Manggarai"
+  },
+  "kelapa-gading": {
+    "name": "Kelapa Gading",
+    "city": "Jakarta Utara",
+    "baseBareRent": 1200000,
+    "description": "North Jakarta culinary and commercial township with LRT line"
   }
 }

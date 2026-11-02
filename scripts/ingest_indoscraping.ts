@@ -15,8 +15,21 @@ const DISTRICT_CENTROIDS: Record<string, { lat: number; lng: number; name: strin
   "tanah-abang": { lat: -6.1895, lng: 106.8142, name: "Tanah Abang" },
   "bendungan-hilir": { lat: -6.2163, lng: 106.8188, name: "Bendungan Hilir" },
   "grogol-petamburan": { lat: -6.1685, lng: 106.7892, name: "Grogol Petamburan" },
+  grogol: { lat: -6.1685, lng: 106.7892, name: "Grogol" },
   "kebon-jeruk": { lat: -6.1925, lng: 106.7689, name: "Kebon Jeruk" },
   karet: { lat: -6.2052, lng: 106.8189, name: "Karet Tengsin" },
+  setiabudi: { lat: -6.2150, lng: 106.8290, name: "Setiabudi" },
+  tebet: { lat: -6.2285, lng: 106.8550, name: "Tebet" },
+  "kebayoran-baru": { lat: -6.2420, lng: 106.8010, name: "Kebayoran Baru" },
+  "kebayoran-lama": { lat: -6.2380, lng: 106.7810, name: "Kebayoran Lama" },
+  cilandak: { lat: -6.2890, lng: 106.7980, name: "Cilandak" },
+  "mampang-prapatan": { lat: -6.2480, lng: 106.8270, name: "Mampang Prapatan" },
+  mampang: { lat: -6.2480, lng: 106.8270, name: "Mampang" },
+  "cempaka-putih": { lat: -6.1820, lng: 106.8680, name: "Cempaka Putih" },
+  matraman: { lat: -6.2050, lng: 106.8580, name: "Matraman" },
+  "kelapa-gading": { lat: -6.1580, lng: 106.9080, name: "Kelapa Gading" },
+  kembangan: { lat: -6.1890, lng: 106.7380, name: "Kembangan" },
+  pancoran: { lat: -6.2460, lng: 106.8450, name: "Pancoran" },
 };
 
 function parseDistrict(areaCategory?: string, title?: string, tags?: string[]): { key: string; name: string; lat: number; lng: number } {
@@ -94,15 +107,33 @@ async function main() {
         if (!url || seenUrls.has(url)) continue;
         seenUrls.add(url);
 
-        const price = item.min_price || item.priceNumeric || (item.max_price ? item.max_price : null);
-        if (!price || price < 400_000 || price > 15_000_000) continue;
-
         const facilities: string[] = item.facilities || [];
         const tags: string[] = item.tags || [];
         const title: string = item.title || "Kost Jakarta";
         const district = parseDistrict(item._area_category || item.area, title, tags);
 
         const amenities = parseAmenities(facilities, `${title} ${tags.join(" ")}`);
+
+        // Compute realistic monthly rent from room tier
+        let price = item.priceNumeric;
+        const minP = item.min_price;
+        const maxP = item.max_price;
+
+        if (minP && maxP && maxP > minP) {
+          if (amenities.hasAC && amenities.hasPrivateBath) {
+            price = Math.round(minP + (maxP - minP) * 0.65);
+          } else if (amenities.hasAC || amenities.hasPrivateBath) {
+            price = Math.round(minP + (maxP - minP) * 0.35);
+          } else {
+            price = minP;
+          }
+        } else {
+          price = minP || maxP || item.priceNumeric;
+        }
+
+        // Clamp minimum realistic monthly rent in Jakarta
+        if (!price || price < 500_000 || price > 15_000_000) continue;
+
         const nearest = findNearestTransitNode(district.lat, district.lng);
 
         const valuation = calculateFairValue(

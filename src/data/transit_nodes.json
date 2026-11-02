@@ -70,5 +70,41 @@
     "lat": -6.2443,
     "lng": 106.7978,
     "description": "Major lifestyle & southern bus terminal transit hub"
+  },
+  {
+    "id": "krl-tebet",
+    "name": "Stasiun KRL Tebet",
+    "type": "KRL",
+    "district": "Jakarta Selatan",
+    "lat": -6.2263,
+    "lng": 106.8582,
+    "description": "Key commuter hub for workers heading to Casablanca and Kuningan"
+  },
+  {
+    "id": "krl-manggarai",
+    "name": "Stasiun Sentral Manggarai",
+    "type": "KRL",
+    "district": "Jakarta Selatan",
+    "lat": -6.2099,
+    "lng": 106.8502,
+    "description": "Central Jakarta railway interchange connecting Bogor, Bekasi, and Bandara lines"
+  },
+  {
+    "id": "mrt-fatmawati",
+    "name": "MRT Fatmawati",
+    "type": "MRT",
+    "district": "Jakarta Selatan",
+    "lat": -6.2926,
+    "lng": 106.7937,
+    "description": "Outer South Jakarta corridor hub on TB Simatupang"
+  },
+  {
+    "id": "krl-grogol",
+    "name": "Stasiun KRL Grogol",
+    "type": "KRL",
+    "district": "Jakarta Barat",
+    "lat": -6.1611,
+    "lng": 106.7904,
+    "description": "University and western shopping hub"
   }
 ]
