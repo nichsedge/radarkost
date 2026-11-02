@@ -1,0 +1,50 @@
+{
+  "palmerah": {
+    "name": "Palmerah",
+    "city": "Jakarta Barat",
+    "baseBareRent": 850000,
+    "description": "Student & commuter corridor; close to Binus, DPR/MPR, Palmerah station"
+  },
+  "kemanggisan": {
+    "name": "Kemanggisan",
+    "city": "Jakarta Barat",
+    "baseBareRent": 900000,
+    "description": "Vibrant residential and food enclave around Binus Syahdan & Anggrek"
+  },
+  "tanah-abang": {
+    "name": "Tanah Abang",
+    "city": "Jakarta Pusat",
+    "baseBareRent": 1000000,
+    "description": "High density trade and transit district adjacent to Thamrin & Sudirman"
+  },
+  "bendungan-hilir": {
+    "name": "Bendungan Hilir",
+    "city": "Jakarta Pusat",
+    "baseBareRent": 1200000,
+    "description": "Prime corporate worker haven with street food and walking access to Sudirman"
+  },
+  "karet": {
+    "name": "Karet / Setiabudi",
+    "city": "Jakarta Pusat",
+    "baseBareRent": 1250000,
+    "description": "Walk-to-work zone behind Sudirman and Rasuna Said skyscapers"
+  },
+  "kebon-jeruk": {
+    "name": "Kebon Jeruk",
+    "city": "Jakarta Barat",
+    "baseBareRent": 800000,
+    "description": "Residential area with quick toll and inner-ring busway connections"
+  },
+  "kebayoran-lama": {
+    "name": "Kebayoran Lama",
+    "city": "Jakarta Selatan",
+    "baseBareRent": 1050000,
+    "description": "Strategic link between South Jakarta lifestyle hubs and Tangerang rail"
+  },
+  "grogol": {
+    "name": "Grogol / Tanjung Duren",
+    "city": "Jakarta Barat",
+    "baseBareRent": 950000,
+    "description": "University and mall hub (Untar, Trisakti, Central Park, Mall Taman Anggrek)"
+  }
+}

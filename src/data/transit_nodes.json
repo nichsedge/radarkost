@@ -1,0 +1,74 @@
+[
+  {
+    "id": "krl-palmerah",
+    "name": "Stasiun KRL Palmerah",
+    "type": "KRL",
+    "district": "Jakarta Pusat / Barat",
+    "lat": -6.2069,
+    "lng": 106.7977,
+    "description": "Direct access to Tanah Abang, Serpong, Rangkasbitung; close to Palmerah & Kemanggisan"
+  },
+  {
+    "id": "krl-tanah-abang",
+    "name": "Stasiun KRL Tanah Abang",
+    "type": "KRL",
+    "district": "Jakarta Pusat",
+    "lat": -6.1857,
+    "lng": 106.8111,
+    "description": "Central interchange hub for Rangkasbitung & Cikarang lines"
+  },
+  {
+    "id": "mrt-dukuh-atas",
+    "name": "MRT Dukuh Atas BNI / KRL Sudirman",
+    "type": "MRT",
+    "district": "Jakarta Pusat",
+    "lat": -6.2023,
+    "lng": 106.8236,
+    "description": "Core business district multi-modal transit hub (MRT + KRL + LRT + Airport Rail)"
+  },
+  {
+    "id": "tj-petamburan",
+    "name": "Halte TransJakarta Petamburan (Slipi)",
+    "type": "TransJakarta",
+    "district": "Jakarta Barat",
+    "lat": -6.1994,
+    "lng": 106.8003,
+    "description": "Corridor 9 (Pinang Ranti - Pluit) connecting western ring to Gatot Subroto"
+  },
+  {
+    "id": "krl-karet",
+    "name": "Stasiun KRL Karet",
+    "type": "KRL",
+    "district": "Jakarta Pusat",
+    "lat": -6.2008,
+    "lng": 106.8166,
+    "description": "Direct pedestrian access to Benhil, Karet, and Sudirman offices"
+  },
+  {
+    "id": "mrt-benhil",
+    "name": "MRT Bendungan Hilir",
+    "type": "MRT",
+    "district": "Jakarta Pusat",
+    "lat": -6.2163,
+    "lng": 106.8188,
+    "description": "Heart of culinary & worker kost hub Bendungan Hilir"
+  },
+  {
+    "id": "krl-kebayoran",
+    "name": "Stasiun KRL Kebayoran",
+    "type": "KRL",
+    "district": "Jakarta Selatan",
+    "lat": -6.2372,
+    "lng": 106.7797,
+    "description": "Connected via Skywalk to Halte Velbak & Pasar Kebayoran"
+  },
+  {
+    "id": "mrt-blok-m",
+    "name": "MRT Blok M BCA",
+    "type": "MRT",
+    "district": "Jakarta Selatan",
+    "lat": -6.2443,
+    "lng": 106.7978,
+    "description": "Major lifestyle & southern bus terminal transit hub"
+  }
+]

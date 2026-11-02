@@ -1,0 +1,1610 @@
+[
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Kos Campur Rukosta Kemanggisan",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 1750000,
+    "amenities": {
+      "hasAC": false,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.202258830417616,
+    "lng": 106.79038156051871,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/kos-campur-rukosta-kemanggisan-201585/",
+    "scrapedAt": "2026-10-24T05:37:30Z",
+    "tags": [
+      "Rukosta Kemanggisan",
+      "Kost Campur",
+      "Palmerah",
+      "Jakarta Barat"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 960,
+      "walkMinutes": 12
+    },
+    "valuation": {
+      "fairValue": 776400,
+      "difference": 973600,
+      "ratio": 2.25,
+      "dealTier": "overpriced",
+      "dealScoreLabel": "Overpriced / Premium Markup",
+      "discountPercent": -125,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 0,
+        "amenityDeltas": {},
+        "transitPenalty": 73600
+      },
+      "trueMonthlyCost": {
+        "rent": 1750000,
+        "estimatedElectricity": 75000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 1975000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Novaren Guest House Kemanggisan",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 2600000,
+    "amenities": {
+      "hasAC": false,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.202488512627457,
+    "lng": 106.79390840438525,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/novaren-guest-house-kemanggisan-201819/",
+    "scrapedAt": "2026-10-24T05:37:30Z",
+    "tags": [
+      "Novaren Guest House Kemanggisan",
+      "Kost Campur",
+      "Palmerah",
+      "Jakarta Barat"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 645,
+      "walkMinutes": 8
+    },
+    "valuation": {
+      "fairValue": 826800,
+      "difference": 1773200,
+      "ratio": 3.14,
+      "dealTier": "overpriced",
+      "dealScoreLabel": "Overpriced / Premium Markup",
+      "discountPercent": -214,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 0,
+        "amenityDeltas": {},
+        "transitPenalty": 23200
+      },
+      "trueMonthlyCost": {
+        "rent": 2600000,
+        "estimatedElectricity": 75000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 2825000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Kost Putri Palmerah (kosong 4 kamar ,1/10/2026)",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Putri",
+    "priceMonthly": 1200000,
+    "amenities": {
+      "hasAC": false,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.206481378137767,
+    "lng": 106.79177212070925,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/kost-putri-palmerah-kosong-4-kamar-1-10-2026-92972/",
+    "scrapedAt": "2026-10-24T05:37:30Z",
+    "tags": [
+      "Kost Putri Palmerah (kosong 5 kamar ,27/",
+      "Kost Putri",
+      "Palmerah",
+      "Jakarta Barat"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 657,
+      "walkMinutes": 8
+    },
+    "valuation": {
+      "fairValue": 824880,
+      "difference": 375120,
+      "ratio": 1.45,
+      "dealTier": "overpriced",
+      "dealScoreLabel": "Overpriced / Premium Markup",
+      "discountPercent": -45,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 0,
+        "amenityDeltas": {},
+        "transitPenalty": 25120
+      },
+      "trueMonthlyCost": {
+        "rent": 1200000,
+        "estimatedElectricity": 75000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 1425000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Kos Avana Slipi Suites dekat Plaza Slipi Binus Kem",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 2850000,
+    "amenities": {
+      "hasAC": false,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.2005136884099885,
+    "lng": 106.79417133345079,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/kos-avana-slipi-suites-dekat-plaza-slipi-binus-kem-200370/",
+    "scrapedAt": "2026-10-24T05:37:30Z",
+    "tags": [
+      "Kost Avana Slipi Suites Co Living",
+      "Kost Campur",
+      "Palmerah",
+      "Jakarta Barat"
+    ],
+    "nearestTransit": {
+      "nodeId": "tj-petamburan",
+      "nodeName": "Halte TransJakarta Petamburan (Slipi)",
+      "distanceMeters": 689,
+      "walkMinutes": 9
+    },
+    "valuation": {
+      "fairValue": 819760,
+      "difference": 2030240,
+      "ratio": 3.48,
+      "dealTier": "overpriced",
+      "dealScoreLabel": "Overpriced / Premium Markup",
+      "discountPercent": -248,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 0,
+        "amenityDeltas": {},
+        "transitPenalty": 30240
+      },
+      "trueMonthlyCost": {
+        "rent": 2850000,
+        "estimatedElectricity": 75000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 3075000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Jaya Residence premium",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 2000000,
+    "amenities": {
+      "hasAC": false,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.202929182009587,
+    "lng": 106.79087514930204,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-utara/jaya-residence-premium-46907/",
+    "scrapedAt": "2026-10-24T05:37:30Z",
+    "tags": [
+      "Jaya Residence premium",
+      "Kost Campur",
+      "Palmerah",
+      "Jakarta Barat"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 874,
+      "walkMinutes": 11
+    },
+    "valuation": {
+      "fairValue": 790160,
+      "difference": 1209840,
+      "ratio": 2.53,
+      "dealTier": "overpriced",
+      "dealScoreLabel": "Overpriced / Premium Markup",
+      "discountPercent": -153,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 0,
+        "amenityDeltas": {},
+        "transitPenalty": 59840
+      },
+      "trueMonthlyCost": {
+        "rent": 2000000,
+        "estimatedElectricity": 75000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 2225000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Jaya Residence slipi",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 1900000,
+    "amenities": {
+      "hasAC": false,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.2047391077384635,
+    "lng": 106.79638782870947,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/jaya-residence-slipi-23561/",
+    "scrapedAt": "2026-10-24T05:37:30Z",
+    "tags": [
+      "Jaya Residence slipi",
+      "Kost Campur",
+      "Palmerah",
+      "Jakarta Barat"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 281,
+      "walkMinutes": 4
+    },
+    "valuation": {
+      "fairValue": 850000,
+      "difference": 1050000,
+      "ratio": 2.24,
+      "dealTier": "overpriced",
+      "dealScoreLabel": "Overpriced / Premium Markup",
+      "discountPercent": -124,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 0,
+        "amenityDeltas": {},
+        "transitPenalty": 0
+      },
+      "trueMonthlyCost": {
+        "rent": 1900000,
+        "estimatedElectricity": 75000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 2125000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Kost jaya residence 4",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 1900000,
+    "amenities": {
+      "hasAC": false,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.206151720974802,
+    "lng": 106.79491615109406,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/kost-jaya-residence-4-102291/",
+    "scrapedAt": "2026-10-24T05:37:30Z",
+    "tags": [
+      "Kost jaya residence 4",
+      "Kost Campur",
+      "Palmerah",
+      "Jakarta Barat"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 319,
+      "walkMinutes": 4
+    },
+    "valuation": {
+      "fairValue": 850000,
+      "difference": 1050000,
+      "ratio": 2.24,
+      "dealTier": "overpriced",
+      "dealScoreLabel": "Overpriced / Premium Markup",
+      "discountPercent": -124,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 0,
+        "amenityDeltas": {},
+        "transitPenalty": 0
+      },
+      "trueMonthlyCost": {
+        "rent": 1900000,
+        "estimatedElectricity": 75000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 2125000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Kos Wanita Dekat BINUS – Mulai Rp950.000!",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Putri",
+    "priceMonthly": 950000,
+    "amenities": {
+      "hasAC": false,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.204932468085959,
+    "lng": 106.795762949764,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/kos-wanita-dekat-binus-–-mulai-rp950-000-201754/",
+    "scrapedAt": "2026-10-24T05:37:30Z",
+    "tags": [
+      "Kost Putri",
+      "Palmerah",
+      "Jakarta Barat"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 306,
+      "walkMinutes": 4
+    },
+    "valuation": {
+      "fairValue": 850000,
+      "difference": 100000,
+      "ratio": 1.12,
+      "dealTier": "fair",
+      "dealScoreLabel": "Fair Market",
+      "discountPercent": -12,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 0,
+        "amenityDeltas": {},
+        "transitPenalty": 0
+      },
+      "trueMonthlyCost": {
+        "rent": 950000,
+        "estimatedElectricity": 75000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 1175000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Kosan suami istri / kosan karyawan karyawati",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost",
+    "priceMonthly": 1200000,
+    "amenities": {
+      "hasAC": false,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.202779156677383,
+    "lng": 106.79494163372146,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/kosan-suami-istri-kosan-karyawan-karyawati-201672/",
+    "scrapedAt": "2026-10-24T05:37:30Z",
+    "tags": [
+      "Mandiri rhaya",
+      "Kost Pasutri",
+      "Palmerah",
+      "Jakarta Barat"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 550,
+      "walkMinutes": 7
+    },
+    "valuation": {
+      "fairValue": 842000,
+      "difference": 358000,
+      "ratio": 1.43,
+      "dealTier": "overpriced",
+      "dealScoreLabel": "Overpriced / Premium Markup",
+      "discountPercent": -43,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 0,
+        "amenityDeltas": {},
+        "transitPenalty": 8000
+      },
+      "trueMonthlyCost": {
+        "rent": 1200000,
+        "estimatedElectricity": 75000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 1425000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Urbanest Inn House Slipi",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 4000000,
+    "amenities": {
+      "hasAC": false,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.2084858347335965,
+    "lng": 106.79700596581108,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/urbanest-inn-house-slipi-178243/",
+    "scrapedAt": "2026-10-24T05:37:30Z",
+    "tags": [
+      "Urbanest Inn House Slipi",
+      "Kost Campur",
+      "Palmerah",
+      "Jakarta Barat"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 192,
+      "walkMinutes": 2
+    },
+    "valuation": {
+      "fairValue": 850000,
+      "difference": 3150000,
+      "ratio": 4.71,
+      "dealTier": "overpriced",
+      "dealScoreLabel": "Overpriced / Premium Markup",
+      "discountPercent": -371,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 0,
+        "amenityDeltas": {},
+        "transitPenalty": 0
+      },
+      "trueMonthlyCost": {
+        "rent": 4000000,
+        "estimatedElectricity": 75000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 4225000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "KOST AC BARU 5 menit Jalan ke Binus Syahdan Anggre",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 2500000,
+    "amenities": {
+      "hasAC": true,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.202922808376999,
+    "lng": 106.79574682259059,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/kost-ac-baru-5-menit-jalan-ke-binus-syahdan-anggre-201108/",
+    "scrapedAt": "2026-10-24T05:37:30Z",
+    "tags": [
+      "KOST KEMANGGISAN PRIME RESIDENCE",
+      "Kost Campur",
+      "Palmerah",
+      "Jakarta Barat"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 492,
+      "walkMinutes": 6
+    },
+    "valuation": {
+      "fairValue": 1350000,
+      "difference": 1150000,
+      "ratio": 1.85,
+      "dealTier": "overpriced",
+      "dealScoreLabel": "Overpriced / Premium Markup",
+      "discountPercent": -85,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 500000,
+        "amenityDeltas": {
+          "Air Conditioner (AC)": 500000
+        },
+        "transitPenalty": 0
+      },
+      "trueMonthlyCost": {
+        "rent": 2500000,
+        "estimatedElectricity": 275000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 2925000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Sewa Murah Kost Kemanggisan Jade Residence Dekat B",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 2400000,
+    "amenities": {
+      "hasAC": false,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.201851263418979,
+    "lng": 106.78968240082872,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/sewa-murah-kost-kemanggisan-jade-residence-dekat-b-201180/",
+    "scrapedAt": "2026-10-24T05:37:30Z",
+    "tags": [
+      "Jade Residence by AbdiHome",
+      "Kost Campur",
+      "Palmerah",
+      "Jakarta Barat"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 1049,
+      "walkMinutes": 13
+    },
+    "valuation": {
+      "fairValue": 762160,
+      "difference": 1637840,
+      "ratio": 3.15,
+      "dealTier": "overpriced",
+      "dealScoreLabel": "Overpriced / Premium Markup",
+      "discountPercent": -215,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 0,
+        "amenityDeltas": {},
+        "transitPenalty": 87840
+      },
+      "trueMonthlyCost": {
+        "rent": 2400000,
+        "estimatedElectricity": 75000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 2625000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "One Syahdan Residence Kost Dekat Binus Anggrek dan",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 1950000,
+    "amenities": {
+      "hasAC": false,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.204530871038893,
+    "lng": 106.7931834143683,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/one-syahdan-residence-kost-dekat-binus-anggrek-dan-200991/",
+    "scrapedAt": "2026-10-24T05:37:30Z",
+    "tags": [
+      "One Syahdan Residence Binus Anggrek Binus Syahdan",
+      "Kost Campur",
+      "Palmerah",
+      "Jakarta Barat"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 565,
+      "walkMinutes": 7
+    },
+    "valuation": {
+      "fairValue": 839600,
+      "difference": 1110400,
+      "ratio": 2.32,
+      "dealTier": "overpriced",
+      "dealScoreLabel": "Overpriced / Premium Markup",
+      "discountPercent": -132,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 0,
+        "amenityDeltas": {},
+        "transitPenalty": 10400
+      },
+      "trueMonthlyCost": {
+        "rent": 1950000,
+        "estimatedElectricity": 75000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 2175000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "KOST EXCLUSIVE NEW HOUSE FULL FASILITAS RS Harapan",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Putri",
+    "priceMonthly": 1800000,
+    "amenities": {
+      "hasAC": false,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.203489224434364,
+    "lng": 106.79055565739189,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/kost-exclusive-new-house-full-fasilitas-rs-harapan-200787/",
+    "scrapedAt": "2026-10-24T05:37:30Z",
+    "tags": [
+      "ANCAK Kost",
+      "Kost Putri",
+      "Palmerah",
+      "Jakarta Barat"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 876,
+      "walkMinutes": 11
+    },
+    "valuation": {
+      "fairValue": 789840,
+      "difference": 1010160,
+      "ratio": 2.28,
+      "dealTier": "overpriced",
+      "dealScoreLabel": "Overpriced / Premium Markup",
+      "discountPercent": -128,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 0,
+        "amenityDeltas": {},
+        "transitPenalty": 60160
+      },
+      "trueMonthlyCost": {
+        "rent": 1800000,
+        "estimatedElectricity": 75000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 2025000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "KOST SYAHDAN DELUXE RESIDENCE dkt BINUS Syahdan An",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 1950000,
+    "amenities": {
+      "hasAC": false,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.204210010379778,
+    "lng": 106.79065687982998,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/kost-syahdan-deluxe-residence-dkt-binus-syahdan-an-200439/",
+    "scrapedAt": "2026-10-24T05:37:30Z",
+    "tags": [
+      "Kost Syahdan Deluxe Residence",
+      "Kost Campur",
+      "Palmerah",
+      "Jakarta Barat"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 834,
+      "walkMinutes": 10
+    },
+    "valuation": {
+      "fairValue": 796560,
+      "difference": 1153440,
+      "ratio": 2.45,
+      "dealTier": "overpriced",
+      "dealScoreLabel": "Overpriced / Premium Markup",
+      "discountPercent": -145,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 0,
+        "amenityDeltas": {},
+        "transitPenalty": 53440
+      },
+      "trueMonthlyCost": {
+        "rent": 1950000,
+        "estimatedElectricity": 75000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 2175000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Kost U - Pavilion Binus Kemanggisan",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 3200000,
+    "amenities": {
+      "hasAC": false,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.201626229250949,
+    "lng": 106.796290543465,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/kost-u-pavilion-binus-kemanggisan-200651/",
+    "scrapedAt": "2026-10-24T05:37:30Z",
+    "tags": [
+      "U - Pavilion Binus Kemanggisan",
+      "Kost Campur",
+      "Palmerah",
+      "Jakarta Barat"
+    ],
+    "nearestTransit": {
+      "nodeId": "tj-petamburan",
+      "nodeName": "Halte TransJakarta Petamburan (Slipi)",
+      "distanceMeters": 508,
+      "walkMinutes": 6
+    },
+    "valuation": {
+      "fairValue": 848720,
+      "difference": 2351280,
+      "ratio": 3.77,
+      "dealTier": "overpriced",
+      "dealScoreLabel": "Overpriced / Premium Markup",
+      "discountPercent": -277,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 0,
+        "amenityDeltas": {},
+        "transitPenalty": 1280
+      },
+      "trueMonthlyCost": {
+        "rent": 3200000,
+        "estimatedElectricity": 75000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 3425000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Kost Cozy Corner Tipe VIP Palmerah Slipi",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 3200000,
+    "amenities": {
+      "hasAC": false,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.200510900400434,
+    "lng": 106.79249618032553,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/kost-cozy-corner-tipe-vip-palmerah-slipi-200642/",
+    "scrapedAt": "2026-10-24T05:37:30Z",
+    "tags": [
+      "Kost Cozy Corner Tipe VIP Palmerah Slipi",
+      "Kost Campur",
+      "Palmerah",
+      "Jakarta Barat"
+    ],
+    "nearestTransit": {
+      "nodeId": "tj-petamburan",
+      "nodeName": "Halte TransJakarta Petamburan (Slipi)",
+      "distanceMeters": 871,
+      "walkMinutes": 11
+    },
+    "valuation": {
+      "fairValue": 790640,
+      "difference": 2409360,
+      "ratio": 4.05,
+      "dealTier": "overpriced",
+      "dealScoreLabel": "Overpriced / Premium Markup",
+      "discountPercent": -305,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 0,
+        "amenityDeltas": {},
+        "transitPenalty": 59360
+      },
+      "trueMonthlyCost": {
+        "rent": 3200000,
+        "estimatedElectricity": 75000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 3425000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Kos di Kemanggisan Jakarta Barat",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 4000000,
+    "amenities": {
+      "hasAC": false,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.204125097054861,
+    "lng": 106.7940386647084,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/kos-di-kemanggisan-jakarta-barat-200623/",
+    "scrapedAt": "2026-10-24T05:37:30Z",
+    "tags": [
+      "Kos Nova Luxe Inn Kemanggisan",
+      "Kost Campur",
+      "Palmerah",
+      "Jakarta Barat"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 509,
+      "walkMinutes": 6
+    },
+    "valuation": {
+      "fairValue": 848560,
+      "difference": 3151440,
+      "ratio": 4.71,
+      "dealTier": "overpriced",
+      "dealScoreLabel": "Overpriced / Premium Markup",
+      "discountPercent": -371,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 0,
+        "amenityDeltas": {},
+        "transitPenalty": 1440
+      },
+      "trueMonthlyCost": {
+        "rent": 4000000,
+        "estimatedElectricity": 75000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 4225000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Kost Casa DM Palmerah",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 3000000,
+    "amenities": {
+      "hasAC": false,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.202060064114651,
+    "lng": 106.78931672623226,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/kost-casa-dm-palmerah-200547/",
+    "scrapedAt": "2026-10-24T05:37:30Z",
+    "tags": [
+      "Casa DM",
+      "Kost Campur",
+      "Palmerah",
+      "Jakarta Barat"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 1072,
+      "walkMinutes": 13
+    },
+    "valuation": {
+      "fairValue": 758480,
+      "difference": 2241520,
+      "ratio": 3.96,
+      "dealTier": "overpriced",
+      "dealScoreLabel": "Overpriced / Premium Markup",
+      "discountPercent": -296,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 0,
+        "amenityDeltas": {},
+        "transitPenalty": 91520
+      },
+      "trueMonthlyCost": {
+        "rent": 3000000,
+        "estimatedElectricity": 75000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 3225000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Kost di Taman Sari Jakarta Barat",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 700000,
+    "amenities": {
+      "hasAC": true,
+      "hasPrivateBath": true,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.200565439937906,
+    "lng": 106.79472651753902,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/taman-sari/",
+    "scrapedAt": "2026-10-17T23:52:10.516730",
+    "tags": [
+      "AC",
+      "Kamar Mandi Dalam"
+    ],
+    "nearestTransit": {
+      "nodeId": "tj-petamburan",
+      "nodeName": "Halte TransJakarta Petamburan (Slipi)",
+      "distanceMeters": 630,
+      "walkMinutes": 8
+    },
+    "valuation": {
+      "fairValue": 1729200,
+      "difference": -1029200,
+      "ratio": 0.4,
+      "dealTier": "steal",
+      "dealScoreLabel": "Steal / Undervalued",
+      "discountPercent": 60,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 900000,
+        "amenityDeltas": {
+          "Air Conditioner (AC)": 500000,
+          "Kamar Mandi Dalam": 400000
+        },
+        "transitPenalty": 20800
+      },
+      "trueMonthlyCost": {
+        "rent": 700000,
+        "estimatedElectricity": 275000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 1125000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Kost di Cengkareng Jakarta Barat",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 800000,
+    "amenities": {
+      "hasAC": true,
+      "hasPrivateBath": true,
+      "hasFreeElectricity": false,
+      "hasWifi": true,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.200810424890369,
+    "lng": 106.7931174302229,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/cengkareng/",
+    "scrapedAt": "2026-10-17T23:52:13.979372",
+    "tags": [
+      "AC",
+      "WiFi",
+      "Kamar Mandi Dalam"
+    ],
+    "nearestTransit": {
+      "nodeId": "tj-petamburan",
+      "nodeName": "Halte TransJakarta Petamburan (Slipi)",
+      "distanceMeters": 809,
+      "walkMinutes": 10
+    },
+    "valuation": {
+      "fairValue": 1800560,
+      "difference": -1000560,
+      "ratio": 0.44,
+      "dealTier": "steal",
+      "dealScoreLabel": "Steal / Undervalued",
+      "discountPercent": 56,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 1000000,
+        "amenityDeltas": {
+          "Air Conditioner (AC)": 500000,
+          "Kamar Mandi Dalam": 400000,
+          "WiFi Cepat": 100000
+        },
+        "transitPenalty": 49440
+      },
+      "trueMonthlyCost": {
+        "rent": 800000,
+        "estimatedElectricity": 275000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 1225000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Di sewakan kost Rumah putih,Jalan Bambu selatan No",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 700000,
+    "amenities": {
+      "hasAC": true,
+      "hasPrivateBath": true,
+      "hasFreeElectricity": false,
+      "hasWifi": true,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.205006860685715,
+    "lng": 106.79527498077285,
+    "address": "Palmerah",
+    "ownerPhone": "6285772851360",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/di-sewakan-kost-rumah-putih-jalan-bambu-selatan-no-200076/",
+    "scrapedAt": "2026-10-17T23:52:17.332873",
+    "tags": [
+      "AC",
+      "WiFi",
+      "Kamar Mandi Dalam",
+      "Spring Bed",
+      "Dapur"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 341,
+      "walkMinutes": 4
+    },
+    "valuation": {
+      "fairValue": 1850000,
+      "difference": -1150000,
+      "ratio": 0.38,
+      "dealTier": "steal",
+      "dealScoreLabel": "Steal / Undervalued",
+      "discountPercent": 62,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 1000000,
+        "amenityDeltas": {
+          "Air Conditioner (AC)": 500000,
+          "Kamar Mandi Dalam": 400000,
+          "WiFi Cepat": 100000
+        },
+        "transitPenalty": 0
+      },
+      "trueMonthlyCost": {
+        "rent": 700000,
+        "estimatedElectricity": 275000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 1125000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Kost di Tambora Jakarta Barat",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 600000,
+    "amenities": {
+      "hasAC": true,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": true,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.205510595634306,
+    "lng": 106.79386234191878,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/tambora/",
+    "scrapedAt": "2026-10-17T23:52:17.950746",
+    "tags": [
+      "AC",
+      "WiFi"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 451,
+      "walkMinutes": 6
+    },
+    "valuation": {
+      "fairValue": 1450000,
+      "difference": -850000,
+      "ratio": 0.41,
+      "dealTier": "steal",
+      "dealScoreLabel": "Steal / Undervalued",
+      "discountPercent": 59,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 600000,
+        "amenityDeltas": {
+          "Air Conditioner (AC)": 500000,
+          "WiFi Cepat": 100000
+        },
+        "transitPenalty": 0
+      },
+      "trueMonthlyCost": {
+        "rent": 600000,
+        "estimatedElectricity": 275000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 1025000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Kost di Kebon Jeruk Jakarta Barat",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 1000000,
+    "amenities": {
+      "hasAC": true,
+      "hasPrivateBath": true,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.201540313735203,
+    "lng": 106.79072116379278,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/kebon-jeruk/",
+    "scrapedAt": "2026-10-17T23:52:18.555484",
+    "tags": [
+      "AC",
+      "Kamar Mandi Dalam"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 975,
+      "walkMinutes": 12
+    },
+    "valuation": {
+      "fairValue": 1674000,
+      "difference": -674000,
+      "ratio": 0.6,
+      "dealTier": "steal",
+      "dealScoreLabel": "Steal / Undervalued",
+      "discountPercent": 40,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 900000,
+        "amenityDeltas": {
+          "Air Conditioner (AC)": 500000,
+          "Kamar Mandi Dalam": 400000
+        },
+        "transitPenalty": 76000
+      },
+      "trueMonthlyCost": {
+        "rent": 1000000,
+        "estimatedElectricity": 275000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 1425000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Kost di Kembangan Jakarta Barat",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 450000,
+    "amenities": {
+      "hasAC": true,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.206075312571823,
+    "lng": 106.79131963044584,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/kembangan/",
+    "scrapedAt": "2026-10-17T23:52:20.479569",
+    "tags": [
+      "AC"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 711,
+      "walkMinutes": 9
+    },
+    "valuation": {
+      "fairValue": 1316240,
+      "difference": -866240,
+      "ratio": 0.34,
+      "dealTier": "steal",
+      "dealScoreLabel": "Steal / Undervalued",
+      "discountPercent": 66,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 500000,
+        "amenityDeltas": {
+          "Air Conditioner (AC)": 500000
+        },
+        "transitPenalty": 33760
+      },
+      "trueMonthlyCost": {
+        "rent": 450000,
+        "estimatedElectricity": 275000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 875000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Cari Kost di Seluruh Indonesia",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 600000,
+    "amenities": {
+      "hasAC": true,
+      "hasPrivateBath": true,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.205544547514409,
+    "lng": 106.79510513665015,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/",
+    "scrapedAt": "2026-10-17T23:52:21.390405",
+    "tags": [
+      "AC",
+      "Kamar Mandi Dalam"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 324,
+      "walkMinutes": 4
+    },
+    "valuation": {
+      "fairValue": 1750000,
+      "difference": -1150000,
+      "ratio": 0.34,
+      "dealTier": "steal",
+      "dealScoreLabel": "Steal / Undervalued",
+      "discountPercent": 66,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 900000,
+        "amenityDeltas": {
+          "Air Conditioner (AC)": 500000,
+          "Kamar Mandi Dalam": 400000
+        },
+        "transitPenalty": 0
+      },
+      "trueMonthlyCost": {
+        "rent": 600000,
+        "estimatedElectricity": 275000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 1025000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Kost di Kalideres Jakarta Barat",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 500000,
+    "amenities": {
+      "hasAC": true,
+      "hasPrivateBath": false,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.201911274916286,
+    "lng": 106.79389249525806,
+    "address": "Palmerah",
+    "ownerPhone": "",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/kalideres/",
+    "scrapedAt": "2026-10-17T23:52:21.748531",
+    "tags": [
+      "AC"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 696,
+      "walkMinutes": 9
+    },
+    "valuation": {
+      "fairValue": 1318640,
+      "difference": -818640,
+      "ratio": 0.38,
+      "dealTier": "steal",
+      "dealScoreLabel": "Steal / Undervalued",
+      "discountPercent": 62,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 500000,
+        "amenityDeltas": {
+          "Air Conditioner (AC)": 500000
+        },
+        "transitPenalty": 31360
+      },
+      "trueMonthlyCost": {
+        "rent": 500000,
+        "estimatedElectricity": 275000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 925000
+      }
+    }
+  },
+  {
+    "id": "aHR0cHM6Ly93d3cu",
+    "title": "Kost di Grogol Petamburan Jakarta Barat",
+    "districtKey": "palmerah",
+    "districtName": "Palmerah",
+    "type": "Kost Campur",
+    "priceMonthly": 750000,
+    "amenities": {
+      "hasAC": true,
+      "hasPrivateBath": true,
+      "hasFreeElectricity": false,
+      "hasWifi": false,
+      "hasWaterHeater": false,
+      "hasCarParking": false,
+      "hasMotorParking": false,
+      "roomSizeM2": 9
+    },
+    "lat": -6.20241017025171,
+    "lng": 106.78990627264564,
+    "address": "Palmerah",
+    "ownerPhone": "6281807213959",
+    "sourceUrl": "https://www.sewakost.com/kost/jakarta/jakarta-barat/grogol-petamburan/",
+    "scrapedAt": "2026-10-17T23:52:23.112171",
+    "tags": [
+      "AC",
+      "Kamar Mandi Dalam"
+    ],
+    "nearestTransit": {
+      "nodeId": "krl-palmerah",
+      "nodeName": "Stasiun KRL Palmerah",
+      "distanceMeters": 996,
+      "walkMinutes": 12
+    },
+    "valuation": {
+      "fairValue": 1670640,
+      "difference": -920640,
+      "ratio": 0.45,
+      "dealTier": "steal",
+      "dealScoreLabel": "Steal / Undervalued",
+      "discountPercent": 55,
+      "breakdown": {
+        "baseRent": 850000,
+        "amenitiesTotal": 900000,
+        "amenityDeltas": {
+          "Air Conditioner (AC)": 500000,
+          "Kamar Mandi Dalam": 400000
+        },
+        "transitPenalty": 79360
+      },
+      "trueMonthlyCost": {
+        "rent": 750000,
+        "estimatedElectricity": 275000,
+        "estimatedLaundry": 150000,
+        "parkingFee": 0,
+        "totalMonthly": 1175000
+      }
+    }
+  }
+]
