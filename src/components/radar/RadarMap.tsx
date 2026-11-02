@@ -21,15 +21,14 @@ export function RadarMap({ listings, transitNodes, onSelectKost, selectedHub }: 
 
     let isMounted = true;
 
-    // Dynamically import Leaflet
     import("leaflet").then((L) => {
       if (!isMounted || !mapContainerRef.current) return;
 
       if (!mapInstanceRef.current) {
-        // Default center: Palmerah / Central Jakarta
+        // Center: Palmerah / Tanah Abang / Central Jakarta
         const map = L.map(mapContainerRef.current, {
-          center: [-6.2069, 106.8111],
-          zoom: 13,
+          center: [-6.2150, 106.8200],
+          zoom: 12,
           zoomControl: false,
         });
 
@@ -55,39 +54,41 @@ export function RadarMap({ listings, transitNodes, onSelectKost, selectedHub }: 
 
       // Render Transit Stations & Isochrones
       transitNodes.forEach((node) => {
-        // 500m walk circle (~6 mins)
+        // 500m walk circle
         L.circle([node.lat, node.lng], {
           radius: 500,
           color: "#10B981",
-          weight: 1,
-          opacity: 0.25,
+          weight: 1.5,
+          opacity: 0.35,
           fillColor: "#10B981",
-          fillOpacity: 0.04,
+          fillOpacity: 0.05,
           dashArray: "4 4",
+          interactive: false,
         }).addTo(markersLayer);
 
-        // Station Icon
+        // Station Marker Icon
         const stationIcon = L.divIcon({
           className: "transit-marker",
           html: `<div style="
-            background: #1F2937;
+            background: #111827;
             border: 2px solid #10B981;
             color: #FFFFFF;
             font-size: 10px;
             font-weight: 800;
-            padding: 3px 6px;
+            padding: 3px 8px;
             border-radius: 999px;
-            box-shadow: 0 0 12px rgba(16, 185, 129, 0.5);
+            box-shadow: 0 0 14px rgba(16, 185, 129, 0.6);
             white-space: nowrap;
             display: flex;
             align-items: center;
-            gap: 3px;
+            gap: 4px;
+            cursor: default;
           ">
             <span>🚆</span>
             <span>${node.name.replace("Stasiun KRL ", "").replace("MRT ", "").replace("Halte TransJakarta ", "TJ ")}</span>
           </div>`,
-          iconSize: [80, 24],
-          iconAnchor: [40, 12],
+          iconSize: [90, 24],
+          iconAnchor: [45, 12],
         });
 
         L.marker([node.lat, node.lng], { icon: stationIcon }).addTo(markersLayer);
@@ -102,58 +103,40 @@ export function RadarMap({ listings, transitNodes, onSelectKost, selectedHub }: 
           tier === "steal" ? "#10B981" : tier === "overpriced" ? "#EF4444" : "#F59E0B";
 
         const marker = L.circleMarker([kost.lat, kost.lng], {
-          radius: tier === "steal" ? 8 : 6,
+          radius: tier === "steal" ? 9 : 7,
           color: "#FFFFFF",
-          weight: 1.5,
+          weight: 2,
           fillColor: color,
-          fillOpacity: 0.9,
+          fillOpacity: 0.95,
         }).addTo(markersLayer);
 
-        // Custom Popup Content
-        const popupContent = document.createElement("div");
-        popupContent.style.cssText = "font-family: inherit; color: #111827; padding: 4px; min-width: 200px;";
-        popupContent.innerHTML = `
-          <div style="font-size: 11px; font-weight: 700; color: #6B7280; text-transform: uppercase;">
-            ${kost.type} • ${kost.districtName}
-          </div>
-          <div style="font-size: 13px; font-weight: 800; margin: 3px 0 6px; color: #111827; line-height: 1.3;">
-            ${kost.title}
-          </div>
-          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
-            <span style="font-size: 15px; font-weight: 800; color: #0F766E;">
-              Rp ${kost.priceMonthly.toLocaleString("id-ID")}
-            </span>
-            <span style="font-size: 11px; color: #4B5563;">
-              Fair: Rp ${kost.valuation?.fairValue.toLocaleString("id-ID")}
-            </span>
-          </div>
-          <div style="font-size: 11px; color: #4B5563; margin-bottom: 8px;">
-            🚶 ~${kost.nearestTransit?.walkMinutes} mnt (${kost.nearestTransit?.distanceMeters}m) ke ${kost.nearestTransit?.nodeName}
-          </div>
-          <button id="inspect-btn-${kost.id}" style="
-            width: 100%;
-            padding: 6px 10px;
-            background: #10B981;
-            color: #FFFFFF;
-            border: none;
-            border-radius: 6px;
-            font-size: 11px;
-            font-weight: 700;
-            cursor: pointer;
-          ">
-            Simulasi True Cost & Nego
-          </button>
-        `;
-
-        marker.bindPopup(popupContent);
-
-        marker.on("popupopen", () => {
-          const btn = document.getElementById(`inspect-btn-${kost.id}`);
-          if (btn) {
-            btn.onclick = () => {
-              onSelectKost?.(kost);
-            };
+        // Interactive Tooltip on Hover
+        marker.bindTooltip(
+          `<div style="font-family: var(--font-sans); color: #111827; padding: 2px 4px;">
+            <div style="font-size: 10px; font-weight: 700; color: #4B5563; text-transform: uppercase;">
+              ${kost.districtName} • ${tier.toUpperCase()}
+            </div>
+            <div style="font-size: 12px; font-weight: 800; margin: 2px 0; color: #111827;">
+              ${kost.title}
+            </div>
+            <div style="font-size: 13px; font-weight: 900; color: #0F766E;">
+              Rp ${kost.priceMonthly.toLocaleString("id-ID")}/bln
+            </div>
+            <div style="font-size: 10px; color: #6B7280; margin-top: 2px;">
+              👉 Klik untuk buka simulasi True Cost & Nego
+            </div>
+          </div>`,
+          {
+            direction: "top",
+            offset: [0, -10],
+            opacity: 0.98,
           }
+        );
+
+        // Direct Click Action: Instantly opens the TrueCostModal!
+        marker.on("click", (e: any) => {
+          L.DomEvent.stopPropagation(e);
+          onSelectKost?.(kost);
         });
       });
 
@@ -161,7 +144,7 @@ export function RadarMap({ listings, transitNodes, onSelectKost, selectedHub }: 
       if (selectedHub && selectedHub !== "all") {
         const targetNode = transitNodes.find((n) => n.id === selectedHub);
         if (targetNode) {
-          map.flyTo([targetNode.lat, targetNode.lng], 15, { duration: 1.2 });
+          map.flyTo([targetNode.lat, targetNode.lng], 14, { duration: 1.2 });
         }
       }
     });
@@ -189,14 +172,14 @@ export function RadarMap({ listings, transitNodes, onSelectKost, selectedHub }: 
           justifyContent: "space-between",
           alignItems: "center",
           borderBottom: "1px solid var(--border-subtle)",
-          background: "rgba(17, 24, 39, 0.9)",
+          background: "rgba(17, 24, 39, 0.95)",
           zIndex: 10,
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", fontSize: "0.85rem", fontWeight: 700 }}>
-          <span>🗺️ Jakarta Transit & Spatial Value Map</span>
+          <span>🗺️ Peta Jakarta & Radius Transit</span>
           <span style={{ fontSize: "0.72rem", color: "var(--text-muted)", fontWeight: 400 }}>
-            (Radius hijau: 500m jalan kaki dari stasiun KRL/MRT)
+            (Klik sembarang titik untuk langsung buka detail kamar & simulasi True Cost)
           </span>
         </div>
 

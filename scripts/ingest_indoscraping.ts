@@ -32,30 +32,83 @@ const DISTRICT_CENTROIDS: Record<string, { lat: number; lng: number; name: strin
   pancoran: { lat: -6.2460, lng: 106.8450, name: "Pancoran" },
 };
 
-function parseDistrict(areaCategory?: string, title?: string, tags?: string[]): { key: string; name: string; lat: number; lng: number } {
-  const text = `${areaCategory || ""} ${title || ""} ${(tags || []).join(" ")}`.toLowerCase();
+function parseDistrict(url: string, areaCategory?: string, title?: string, tags?: string[]): { key: string; name: string; lat: number; lng: number } | null {
+  const text = `${url} ${areaCategory || ""} ${title || ""} ${(tags || []).join(" ")}`.toLowerCase();
 
-  for (const [key, centroid] of Object.entries(DISTRICT_CENTROIDS)) {
-    if (text.includes(key.replace("-", " ")) || text.includes(key)) {
-      // Add slight jitter so cards don't overlap exactly on map
-      const jitterLat = (Math.random() - 0.5) * 0.008;
-      const jitterLng = (Math.random() - 0.5) * 0.008;
-      return {
-        key,
-        name: centroid.name,
-        lat: centroid.lat + jitterLat,
-        lng: centroid.lng + jitterLng,
-      };
-    }
+  // Strictly verify it belongs to Jakarta
+  if (!text.includes("jakarta")) {
+    return null;
   }
 
-  // Fallback to Palmerah / Jakarta Barat
-  return {
-    key: "palmerah",
-    name: "Palmerah",
-    lat: -6.2045 + (Math.random() - 0.5) * 0.008,
-    lng: 106.7932 + (Math.random() - 0.5) * 0.008,
-  };
+  // Sub-district specificity check
+  if (text.includes("kemanggisan")) {
+    return { key: "kemanggisan", name: "Kemanggisan", lat: -6.1978 + (Math.random() - 0.5) * 0.005, lng: 106.7874 + (Math.random() - 0.5) * 0.005 };
+  }
+  if (text.includes("slipi")) {
+    return { key: "palmerah", name: "Slipi / Palmerah", lat: -6.2005 + (Math.random() - 0.5) * 0.005, lng: 106.7980 + (Math.random() - 0.5) * 0.005 };
+  }
+  if (text.includes("palmerah")) {
+    return { key: "palmerah", name: "Palmerah", lat: -6.2045 + (Math.random() - 0.5) * 0.005, lng: 106.7932 + (Math.random() - 0.5) * 0.005 };
+  }
+  if (text.includes("tanah abang") || text.includes("tanah-abang")) {
+    return { key: "tanah-abang", name: "Tanah Abang", lat: -6.1895 + (Math.random() - 0.5) * 0.005, lng: 106.8142 + (Math.random() - 0.5) * 0.005 };
+  }
+  if (text.includes("bendungan hilir") || text.includes("bendungan-hilir") || text.includes("benhil")) {
+    return { key: "bendungan-hilir", name: "Bendungan Hilir", lat: -6.2163 + (Math.random() - 0.5) * 0.005, lng: 106.8188 + (Math.random() - 0.5) * 0.005 };
+  }
+  if (text.includes("setiabudi") || text.includes("kuningan") || text.includes("karet")) {
+    return { key: "setiabudi", name: "Setiabudi / Kuningan", lat: -6.2150 + (Math.random() - 0.5) * 0.005, lng: 106.8290 + (Math.random() - 0.5) * 0.005 };
+  }
+  if (text.includes("tebet")) {
+    return { key: "tebet", name: "Tebet", lat: -6.2285 + (Math.random() - 0.5) * 0.005, lng: 106.8550 + (Math.random() - 0.5) * 0.005 };
+  }
+  if (text.includes("cilandak") || text.includes("fatmawati") || text.includes("cipete") || text.includes("simatupang")) {
+    return { key: "cilandak", name: "Cilandak / Fatmawati", lat: -6.2890 + (Math.random() - 0.5) * 0.005, lng: 106.7980 + (Math.random() - 0.5) * 0.005 };
+  }
+  if (text.includes("kebayoran-baru") || text.includes("kebayoran baru") || text.includes("blok m") || text.includes("senayan") || text.includes("gandaria") || text.includes("dharmawangsa")) {
+    return { key: "kebayoran-baru", name: "Kebayoran Baru", lat: -6.2420 + (Math.random() - 0.5) * 0.005, lng: 106.8010 + (Math.random() - 0.5) * 0.005 };
+  }
+  if (text.includes("kebayoran-lama") || text.includes("kebayoran lama")) {
+    return { key: "kebayoran-lama", name: "Kebayoran Lama", lat: -6.2380 + (Math.random() - 0.5) * 0.005, lng: 106.7810 + (Math.random() - 0.5) * 0.005 };
+  }
+  if (text.includes("mampang") || text.includes("tendean") || text.includes("kemang")) {
+    return { key: "mampang-prapatan", name: "Mampang Prapatan", lat: -6.2480 + (Math.random() - 0.5) * 0.005, lng: 106.8270 + (Math.random() - 0.5) * 0.005 };
+  }
+  if (text.includes("grogol") || text.includes("tomang") || text.includes("tanjung duren") || text.includes("roxy")) {
+    return { key: "grogol-petamburan", name: "Grogol Petamburan", lat: -6.1685 + (Math.random() - 0.5) * 0.005, lng: 106.7892 + (Math.random() - 0.5) * 0.005 };
+  }
+  if (text.includes("kebon jeruk") || text.includes("kebon-jeruk") || text.includes("kedoya")) {
+    return { key: "kebon-jeruk", name: "Kebon Jeruk", lat: -6.1925 + (Math.random() - 0.5) * 0.005, lng: 106.7689 + (Math.random() - 0.5) * 0.005 };
+  }
+  if (text.includes("cempaka putih") || text.includes("cempaka-putih") || text.includes("salemba") || text.includes("senen")) {
+    return { key: "cempaka-putih", name: "Cempaka Putih", lat: -6.1820 + (Math.random() - 0.5) * 0.005, lng: 106.8680 + (Math.random() - 0.5) * 0.005 };
+  }
+  if (text.includes("matraman") || text.includes("manggarai") || text.includes("jatinegara")) {
+    return { key: "matraman", name: "Matraman", lat: -6.2050 + (Math.random() - 0.5) * 0.005, lng: 106.8580 + (Math.random() - 0.5) * 0.005 };
+  }
+  if (text.includes("kelapa gading") || text.includes("kelapa-gading") || text.includes("sunter") || text.includes("pluit")) {
+    return { key: "kelapa-gading", name: "Kelapa Gading", lat: -6.1580 + (Math.random() - 0.5) * 0.005, lng: 106.9080 + (Math.random() - 0.5) * 0.005 };
+  }
+
+  // Fallback by Jakarta administrative city
+  if (text.includes("jakarta-selatan") || text.includes("jakarta selatan")) {
+    return { key: "setiabudi", name: "Jakarta Selatan (Setiabudi)", lat: -6.2150 + (Math.random() - 0.5) * 0.005, lng: 106.8290 + (Math.random() - 0.5) * 0.005 };
+  }
+  if (text.includes("jakarta-pusat") || text.includes("jakarta pusat")) {
+    return { key: "tanah-abang", name: "Jakarta Pusat (Tanah Abang)", lat: -6.1895 + (Math.random() - 0.5) * 0.005, lng: 106.8142 + (Math.random() - 0.5) * 0.005 };
+  }
+  if (text.includes("jakarta-barat") || text.includes("jakarta barat")) {
+    return { key: "palmerah", name: "Jakarta Barat (Palmerah)", lat: -6.2045 + (Math.random() - 0.5) * 0.005, lng: 106.7932 + (Math.random() - 0.5) * 0.005 };
+  }
+  if (text.includes("jakarta-timur") || text.includes("jakarta timur")) {
+    return { key: "matraman", name: "Jakarta Timur (Matraman)", lat: -6.2050 + (Math.random() - 0.5) * 0.005, lng: 106.8580 + (Math.random() - 0.5) * 0.005 };
+  }
+  if (text.includes("jakarta-utara") || text.includes("jakarta utara")) {
+    return { key: "kelapa-gading", name: "Jakarta Utara (Kelapa Gading)", lat: -6.1580 + (Math.random() - 0.5) * 0.005, lng: 106.9080 + (Math.random() - 0.5) * 0.005 };
+  }
+
+  // Not in Jakarta -> Do not ingest
+  return null;
 }
 
 function parseAmenities(facilities: string[] = [], text = ""): AmenityFlags {
@@ -107,10 +160,32 @@ async function main() {
         if (!url || seenUrls.has(url)) continue;
         seenUrls.add(url);
 
+        // Strict listing validation: Must be an actual listing on SewaKost ending with numeric ID
+        if (!/\/kost\/jakarta\/[a-z0-9\-]+\/[a-z0-9\-]+-\d{4,8}\/?$/.test(url)) {
+          continue;
+        }
+
         const facilities: string[] = item.facilities || [];
         const tags: string[] = item.tags || [];
         const title: string = item.title || "Kost Jakarta";
-        const district = parseDistrict(item._area_category || item.area, title, tags);
+        const lowerTitle = title.toLowerCase();
+
+        // Reject category pages, tag aggregations, and national landing pages
+        if (
+          lowerTitle.includes("hasil pencarian") ||
+          lowerTitle.includes("pilihan mulai") ||
+          lowerTitle.includes("daftar kost") ||
+          lowerTitle.includes("cari kost") ||
+          lowerTitle.includes("sewa kost di bali") ||
+          lowerTitle.includes("sewa kost di semarang") ||
+          lowerTitle.includes("sewa kost di jogja") ||
+          lowerTitle.includes("sewa kost di jawa")
+        ) {
+          continue;
+        }
+
+        const district = parseDistrict(url, item._area_category || item.area, title, tags);
+        if (!district) continue;
 
         const amenities = parseAmenities(facilities, `${title} ${tags.join(" ")}`);
 

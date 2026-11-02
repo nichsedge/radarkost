@@ -41,7 +41,11 @@ export function KostCard({ kost, onOpenCalculator }: KostCardProps) {
         borderLeft: isSteal ? "4px solid var(--tier-steal)" : undefined,
       }}
     >
-      <div>
+      <div 
+        onClick={() => onOpenCalculator?.(kost)} 
+        style={{ cursor: "pointer" }}
+        title="Klik untuk buka simulasi True Cost & Nego"
+      >
         {/* Top Badges */}
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem", gap: "0.5rem" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", flexWrap: "wrap" }}>
