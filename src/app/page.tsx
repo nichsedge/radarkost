@@ -37,6 +37,7 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true);
   const [selectedHub, setSelectedHub] = useState("all");
   const [selectedTier, setSelectedTier] = useState("all");
+  const [selectedGender, setSelectedGender] = useState("all");
   const [filterAC, setFilterAC] = useState(false);
   const [filterKM, setFilterKM] = useState(false);
   const [filterFreeListrik, setFilterFreeListrik] = useState(false);
@@ -73,6 +74,12 @@ export default function HomePage() {
       if (selectedTier !== "all" && item.valuation?.dealTier !== selectedTier) {
         return false;
       }
+      if (selectedGender !== "all") {
+        const typeLower = item.type.toLowerCase();
+        if (selectedGender === "putri" && !typeLower.includes("putri")) return false;
+        if (selectedGender === "putra" && !typeLower.includes("putra")) return false;
+        if (selectedGender === "campur" && !typeLower.includes("campur")) return false;
+      }
       if (filterAC && !item.amenities.hasAC) {
         return false;
       }
@@ -87,7 +94,7 @@ export default function HomePage() {
       }
       return true;
     });
-  }, [allListings, selectedHub, selectedTier, filterAC, filterKM, filterFreeListrik, maxBudget]);
+  }, [allListings, selectedHub, selectedTier, selectedGender, filterAC, filterKM, filterFreeListrik, maxBudget]);
 
   const stats = useMemo(() => {
     const steals = allListings.filter((l) => l.valuation?.dealTier === "steal").length;
@@ -163,6 +170,8 @@ export default function HomePage() {
         onSelectHub={setSelectedHub}
         selectedTier={selectedTier}
         onSelectTier={setSelectedTier}
+        selectedGender={selectedGender}
+        onSelectGender={setSelectedGender}
         filterAC={filterAC}
         onToggleAC={() => setFilterAC((p) => !p)}
         filterKM={filterKM}

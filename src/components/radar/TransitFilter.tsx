@@ -10,6 +10,8 @@ interface TransitFilterProps {
   onSelectHub: (id: string) => void;
   selectedTier: string;
   onSelectTier: (tier: string) => void;
+  selectedGender: string;
+  onSelectGender: (gender: string) => void;
   filterAC: boolean;
   onToggleAC: () => void;
   filterKM: boolean;
@@ -26,6 +28,8 @@ export function TransitFilter({
   onSelectHub,
   selectedTier,
   onSelectTier,
+  selectedGender,
+  onSelectGender,
   filterAC,
   onToggleAC,
   filterKM,
@@ -98,8 +102,39 @@ export function TransitFilter({
         </div>
       </div>
 
-      {/* Row 2: Deal Tier + Amenity Toggles + Budget */}
+      {/* Row 2: Gender Type + Deal Tier + Amenity Toggles + Budget */}
       <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "1rem", borderTop: "1px solid rgba(255, 255, 255, 0.06)", paddingTop: "0.9rem" }}>
+        {/* Gender / Type Selector */}
+        <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
+          <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", fontWeight: 600, marginRight: "0.2rem" }}>
+            Tipe:
+          </span>
+          {[
+            { id: "all", label: "Semua" },
+            { id: "putri", label: "👩 Putri" },
+            { id: "putra", label: "👨 Putra" },
+            { id: "campur", label: "👫 Campur" },
+          ].map((g) => (
+            <button
+              key={g.id}
+              type="button"
+              onClick={() => onSelectGender(g.id)}
+              style={{
+                padding: "0.3rem 0.65rem",
+                borderRadius: "6px",
+                fontSize: "0.75rem",
+                fontWeight: 600,
+                cursor: "pointer",
+                border: selectedGender === g.id ? "1px solid var(--accent-radar)" : "1px solid transparent",
+                background: selectedGender === g.id ? "rgba(16, 185, 129, 0.18)" : "rgba(255, 255, 255, 0.03)",
+                color: selectedGender === g.id ? "var(--accent-radar)" : "var(--text-muted)",
+              }}
+            >
+              {g.label}
+            </button>
+          ))}
+        </div>
+
         {/* Deal Tier Selector */}
         <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
           <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", fontWeight: 600, marginRight: "0.2rem" }}>

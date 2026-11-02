@@ -227,12 +227,33 @@ async function main() {
           cleanPhone = cleanPhone.slice(1);
         }
 
+        const checkText = `${title} ${tags.join(" ")} ${item.type || ""} ${url}`.toLowerCase();
+        let kostType = "Kost Campur";
+        if (
+          checkText.includes("putri") ||
+          checkText.includes("wanita") ||
+          checkText.includes("karyawati") ||
+          checkText.includes("cewek") ||
+          checkText.includes("muslimah")
+        ) {
+          kostType = "Kost Putri";
+        } else if (
+          checkText.includes("putra") ||
+          checkText.includes("pria") ||
+          checkText.includes("cowok") ||
+          checkText.includes("karyawan pria")
+        ) {
+          kostType = "Kost Putra";
+        } else {
+          kostType = "Kost Campur";
+        }
+
         const listing: KostListing = {
           id: Buffer.from(url).toString("base64url").slice(0, 16),
           title: title.trim(),
           districtKey: district.key,
           districtName: district.name,
-          type: item.type || (title.toLowerCase().includes("putri") ? "Kost Putri" : title.toLowerCase().includes("putra") ? "Kost Putra" : "Kost Campur"),
+          type: kostType,
           priceMonthly: price,
           amenities,
           lat: district.lat,

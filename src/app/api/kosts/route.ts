@@ -14,6 +14,7 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const hub = searchParams.get("hub");
     const tier = searchParams.get("tier");
+    const gender = searchParams.get("gender") || searchParams.get("type");
     const hasAC = searchParams.get("ac") === "true";
     const hasKM = searchParams.get("km") === "true";
     const hasFreeListrik = searchParams.get("listrik") === "true";
@@ -28,6 +29,9 @@ export async function GET(request: Request) {
     }
     if (tier && tier !== "all") {
       listings = listings.filter((l) => l.valuation?.dealTier === tier);
+    }
+    if (gender && gender !== "all") {
+      listings = listings.filter((l) => l.type.toLowerCase().includes(gender.toLowerCase()));
     }
     if (hasAC) {
       listings = listings.filter((l) => l.amenities.hasAC);
