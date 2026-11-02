@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useMemo } from "react";
+import dynamic from "next/dynamic";
 import type { KostListing, TransitNode } from "@/lib/valuation/types";
 import { TransitFilter } from "@/components/radar/TransitFilter";
 import { KostCard } from "@/components/radar/KostCard";
@@ -10,12 +11,26 @@ import transitNodesData from "@/data/transit_nodes.json";
 import { 
   Radar, 
   Sparkles, 
-  TrendingDown, 
   Layers, 
   ShieldAlert, 
-  SlidersHorizontal,
-  Compass
+  Compass,
+  Map as MapIcon,
+  TrendingUp,
+  LayoutGrid
 } from "lucide-react";
+
+// Dynamic import for Leaflet map to prevent SSR issues
+const RadarMap = dynamic(
+  () => import("@/components/radar/RadarMap").then((mod) => mod.RadarMap),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="radar-card" style={{ height: "450px", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--text-muted)", marginBottom: "1.75rem" }}>
+        Memuat peta Jakarta...
+      </div>
+    ),
+  }
+);
 
 export default function HomePage() {
   const [allListings, setAllListings] = useState<KostListing[]>([]);
@@ -27,7 +42,7 @@ export default function HomePage() {
   const [filterFreeListrik, setFilterFreeListrik] = useState(false);
   const [maxBudget, setMaxBudget] = useState(5000000);
   const [activeModalKost, setActiveModalKost] = useState<KostListing | null>(null);
-  const [viewMode, setViewMode] = useState<"grid" | "plot">("grid");
+  const [viewVisual, setViewVisual] = useState<"map" | "plot" | "both">("map");
 
   const transitNodes = transitNodesData as TransitNode[];
 
@@ -158,32 +173,96 @@ export default function HomePage() {
         onChangeMaxBudget={setMaxBudget}
       />
 
+      {/* Visualizer Mode Switcher */}
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
+        <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "var(--text-secondary)" }}>
+          Visualisasi Spasial & Kuantitatif:
+        </div>
+        <div style={{ display: "flex", gap: "0.4rem" }}>
+          <button
+            type="button"
+            onClick={() => setViewVisual("map")}
+            style={{
+              padding: "0.4rem 0.8rem",
+              borderRadius: "8px",
+              fontSize: "0.78rem",
+              fontWeight: 600,
+              cursor: "pointer",
+              border: viewVisual === "map" ? "1px solid var(--accent-radar)" : "1px solid var(--border-subtle)",
+              background: viewVisual === "map" ? "var(--accent-glow)" : "rgba(255, 255, 255, 0.03)",
+              color: viewVisual === "map" ? "var(--accent-radar)" : "var(--text-muted)",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.35rem",
+            }}
+          >
+            <MapIcon size={14} />
+            <span>Peta Jakarta & Radius Transit</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setViewVisual("plot")}
+            style={{
+              padding: "0.4rem 0.8rem",
+              borderRadius: "8px",
+              fontSize: "0.78rem",
+              fontWeight: 600,
+              cursor: "pointer",
+              border: viewVisual === "plot" ? "1px solid var(--accent-radar)" : "1px solid var(--border-subtle)",
+              background: viewVisual === "plot" ? "var(--accent-glow)" : "rgba(255, 255, 255, 0.03)",
+              color: viewVisual === "plot" ? "var(--accent-radar)" : "var(--text-muted)",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.35rem",
+            }}
+          >
+            <TrendingUp size={14} />
+            <span>Value Frontier Plot</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setViewVisual("both")}
+            style={{
+              padding: "0.4rem 0.8rem",
+              borderRadius: "8px",
+              fontSize: "0.78rem",
+              fontWeight: 600,
+              cursor: "pointer",
+              border: viewVisual === "both" ? "1px solid var(--accent-radar)" : "1px solid var(--border-subtle)",
+              background: viewVisual === "both" ? "var(--accent-glow)" : "rgba(255, 255, 255, 0.03)",
+              color: viewVisual === "both" ? "var(--accent-radar)" : "var(--text-muted)",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.35rem",
+            }}
+          >
+            <LayoutGrid size={14} />
+            <span>Keduanya</span>
+          </button>
+        </div>
+      </div>
+
+      {/* Interactive Map Visualizer */}
+      {(viewVisual === "map" || viewVisual === "both") && (
+        <RadarMap
+          listings={filteredListings}
+          transitNodes={transitNodes}
+          selectedHub={selectedHub}
+          onSelectKost={setActiveModalKost}
+        />
+      )}
+
       {/* Value Scatter Plot Visualizer */}
-      <ValueScatterPlot listings={filteredListings} onSelectKost={setActiveModalKost} />
+      {(viewVisual === "plot" || viewVisual === "both") && (
+        <ValueScatterPlot listings={filteredListings} onSelectKost={setActiveModalKost} />
+      )}
 
       {/* View Header & Count */}
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
         <div style={{ fontSize: "0.9rem", color: "var(--text-secondary)" }}>
           Menampilkan <strong style={{ color: "var(--text-primary)" }}>{filteredListings.length}</strong> listing kamar aktif
-        </div>
-
-        <div style={{ display: "flex", gap: "0.4rem" }}>
-          <button
-            type="button"
-            onClick={() => setViewMode("grid")}
-            style={{
-              padding: "0.35rem 0.75rem",
-              borderRadius: "6px",
-              fontSize: "0.78rem",
-              fontWeight: 600,
-              cursor: "pointer",
-              border: viewMode === "grid" ? "1px solid var(--accent-radar)" : "1px solid var(--border-subtle)",
-              background: viewMode === "grid" ? "rgba(16, 185, 129, 0.15)" : "transparent",
-              color: viewMode === "grid" ? "var(--accent-radar)" : "var(--text-muted)",
-            }}
-          >
-            Grid Cards
-          </button>
         </div>
       </div>
 

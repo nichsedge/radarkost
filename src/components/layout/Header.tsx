@@ -48,13 +48,23 @@ export function Header() {
             <Compass size={16} color="var(--accent-radar)" />
             <span>Hub Radar</span>
           </Link>
-          <a
-            href="#fair-value-calculator"
-            style={{ display: "flex", alignItems: "center", gap: "0.4rem", color: "var(--text-secondary)" }}
+          <Link
+            href="/cek"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "0.4rem",
+              color: "var(--accent-radar)",
+              fontWeight: 600,
+              padding: "0.3rem 0.65rem",
+              borderRadius: "6px",
+              background: "rgba(16, 185, 129, 0.1)",
+              border: "1px solid rgba(16, 185, 129, 0.25)"
+            }}
           >
-            <Calculator size={16} />
-            <span>Valuation Model</span>
-          </a>
+            <Calculator size={15} />
+            <span>Cek Harga Kost</span>
+          </Link>
           <span style={{
             padding: "0.25rem 0.6rem",
             fontSize: "0.72rem",
