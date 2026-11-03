@@ -22,7 +22,10 @@ import {
   Footprints,
   ShieldCheck,
   TrendingDown,
-  MessageCircle
+  MessageCircle,
+  MapPin,
+  Navigation,
+  Loader2
 } from "lucide-react";
 
 export default function CekHargaKostPage() {
@@ -41,6 +44,38 @@ export default function CekHargaKostPage() {
   const [hasMotorParking, setHasMotorParking] = useState(true);
   const [distanceToTransit, setDistanceToTransit] = useState(600); // meters
   const [copied, setCopied] = useState(false);
+
+  // Google Maps True Route State
+  const [addressInput, setAddressInput] = useState("");
+  const [targetHubId, setTargetHubId] = useState("krl-palmerah");
+  const [isRouting, setIsRouting] = useState(false);
+  const [routeData, setRouteData] = useState<any>(null);
+  const [routeError, setRouteError] = useState<string | null>(null);
+
+  async function handleCalculateRealRoute() {
+    if (!addressInput.trim()) return;
+    setIsRouting(true);
+    setRouteError(null);
+    try {
+      const res = await fetch("/api/transit/route", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ address: addressInput, hubId: targetHubId }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || "Gagal menghitung rute");
+      }
+      setRouteData(data);
+      if (data.route?.actualDistanceMeters) {
+        setDistanceToTransit(data.route.actualDistanceMeters);
+      }
+    } catch (err: any) {
+      setRouteError(err.message);
+    } finally {
+      setIsRouting(false);
+    }
+  }
 
   const amenities: AmenityFlags = useMemo(() => ({
     hasAC,
@@ -241,26 +276,156 @@ export default function CekHargaKostPage() {
               </div>
             </div>
 
-            {/* Transit Distance */}
+            {/* Transit Distance & Google Maps True Route */}
             <div>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "0.3rem" }}>
                 <label style={{ fontSize: "0.78rem", fontWeight: 700, color: "var(--text-secondary)", display: "flex", alignItems: "center", gap: "0.3rem" }}>
                   <Footprints size={14} color="var(--accent-radar)" />
                   Jarak Jalan Kaki ke Stasiun/Halte:
                 </label>
-                <span style={{ fontSize: "0.82rem", fontWeight: 700, color: "var(--text-primary)" }}>
+                <span style={{ fontSize: "0.82rem", fontWeight: 700, color: "var(--accent-radar)" }}>
                   {distanceToTransit}m (~{Math.round(distanceToTransit / 80)} mnt jalan)
                 </span>
               </div>
               <input
                 type="range"
                 min="100"
-                max="2500"
-                step="50"
+                max="3000"
+                step="25"
                 value={distanceToTransit}
                 onChange={(e) => setDistanceToTransit(Number(e.target.value))}
-                style={{ width: "100%", accentColor: "var(--accent-radar)" }}
+                style={{ width: "100%", accentColor: "var(--accent-radar)", marginBottom: "0.75rem" }}
               />
+
+              {/* Google Maps True Route Calculator Card */}
+              <div
+                style={{
+                  background: "rgba(0, 0, 0, 0.25)",
+                  border: "1px solid var(--border-subtle)",
+                  borderRadius: "8px",
+                  padding: "0.75rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.5rem",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                  <span style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--text-primary)", display: "flex", alignItems: "center", gap: "0.3rem" }}>
+                    <Navigation size={13} color="var(--accent-radar)" />
+                    Hitung Rute Nyata (Google Maps)
+                  </span>
+                  <span style={{ fontSize: "0.65rem", padding: "0.15rem 0.4rem", borderRadius: "4px", background: "rgba(52, 211, 153, 0.15)", color: "#34D399", fontWeight: 600 }}>
+                    Google Routes API
+                  </span>
+                </div>
+
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.4rem" }}>
+                  <select
+                    value={targetHubId}
+                    onChange={(e) => setTargetHubId(e.target.value)}
+                    style={{
+                      padding: "0.4rem 0.5rem",
+                      borderRadius: "6px",
+                      background: "rgba(255, 255, 255, 0.04)",
+                      border: "1px solid var(--border-subtle)",
+                      color: "var(--text-primary)",
+                      fontSize: "0.75rem",
+                      outline: "none",
+                    }}
+                  >
+                    {transitNodes.map((node) => (
+                      <option key={node.id} value={node.id} style={{ background: "#111827", color: "#fff" }}>
+                        {node.name}
+                      </option>
+                    ))}
+                  </select>
+
+                  <input
+                    type="text"
+                    placeholder="Alamat/Jalan kost..."
+                    value={addressInput}
+                    onChange={(e) => setAddressInput(e.target.value)}
+                    onKeyDown={(e) => e.key === "Enter" && handleCalculateRealRoute()}
+                    style={{
+                      padding: "0.4rem 0.5rem",
+                      borderRadius: "6px",
+                      background: "rgba(255, 255, 255, 0.04)",
+                      border: "1px solid var(--border-subtle)",
+                      color: "var(--text-primary)",
+                      fontSize: "0.75rem",
+                      outline: "none",
+                    }}
+                  />
+                </div>
+
+                <button
+                  type="button"
+                  onClick={handleCalculateRealRoute}
+                  disabled={isRouting || !addressInput.trim()}
+                  style={{
+                    padding: "0.45rem",
+                    borderRadius: "6px",
+                    background: addressInput.trim() ? "var(--accent-radar)" : "rgba(255, 255, 255, 0.08)",
+                    color: addressInput.trim() ? "#000" : "var(--text-muted)",
+                    fontSize: "0.75rem",
+                    fontWeight: 700,
+                    border: "none",
+                    cursor: addressInput.trim() ? "pointer" : "not-allowed",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "0.35rem",
+                    transition: "all 0.2s",
+                  }}
+                >
+                  {isRouting ? (
+                    <>
+                      <Loader2 size={13} className="spin" />
+                      <span>Menghitung Rute Jalan Kaki...</span>
+                    </>
+                  ) : (
+                    <>
+                      <MapPin size={13} />
+                      <span>Cek Rute Riil & Sinkronkan</span>
+                    </>
+                  )}
+                </button>
+
+                {routeError && (
+                  <div style={{ fontSize: "0.7rem", color: "var(--tier-overpriced)", marginTop: "0.2rem" }}>
+                    ⚠️ {routeError}
+                  </div>
+                )}
+
+                {routeData && (
+                  <div
+                    style={{
+                      marginTop: "0.3rem",
+                      padding: "0.5rem",
+                      borderRadius: "6px",
+                      background: "rgba(52, 211, 153, 0.08)",
+                      border: "1px solid rgba(52, 211, 153, 0.2)",
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "0.25rem",
+                      fontSize: "0.72rem",
+                    }}
+                  >
+                    <div style={{ color: "#34D399", fontWeight: 700, display: "flex", justifyContent: "space-between" }}>
+                      <span>🚶 Rute Nyata: {routeData.route?.actualDistanceMeters}m ({routeData.route?.actualDurationMinutes} mnt jalan)</span>
+                      <span>Detour: {routeData.route?.detourFactor}x</span>
+                    </div>
+                    <div style={{ color: "var(--text-muted)", fontSize: "0.68rem" }}>
+                      Garis lurus: {routeData.route?.straightDistanceMeters}m | Penalti detour riil diterapkan otomatis ke valuasi.
+                    </div>
+                    {routeData.geocoded?.formattedAddress && (
+                      <div style={{ color: "var(--text-secondary)", fontSize: "0.65rem", textOverflow: "ellipsis", overflow: "hidden", whiteSpace: "nowrap" }}>
+                        📍 {routeData.geocoded.formattedAddress}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

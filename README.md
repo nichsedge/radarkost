@@ -13,6 +13,7 @@
   - 🟡 **Fair Market** ($\pm 10\%$)
   - 🔴 **Overpriced** ($>20\%$ above fair value)
 - 🚆 **Transit-First Hub Discovery**: Filter by walking distance or commute stops from major hubs (KRL Stasiun Palmerah, Tanah Abang, Sudirman, MRT Dukuh Atas, Halte TJ Petamburan).
+- 📍 **True Walking Route Engine (Google Maps)**: Calculates actual pedestrian walking distance, detour ratios, and walking durations via Google Routes API & Geocoding API to prevent misleading "as-the-crow-flies" transit claims.
 - 💰 **True Cost of Living**: Advertised rent + estimated electricity token + laundry + parking = actual monthly outflow.
 - 💬 **Direct-to-Owner WhatsApp**: 1-click WhatsApp inquiry bypassing middleman aggregator fees.
 
